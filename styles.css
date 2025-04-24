@@ -1,8 +1,8 @@
 html,
 body {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin: 0;
   padding: 0;
+  height: 100%;
   line-height: 1.5;
   color: #333333;
 }
@@ -10,6 +10,12 @@ body,
 .contact-input,
 .contact-textarea {
   font-family: "Poppins", sans-serif;
+}
+form {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 .contact-page {
   min-height: 100vh;
@@ -21,11 +27,45 @@ body,
   width: 800px;
   padding: 30px;
   margin: 0 auto;
+  gap: 20px;
+  align-items: center;
+}
+/* Stack vertically on smaller screens */
+@media (max-width: 768px) {
+  .contact-form-section {
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+  }
 }
 .contact-image {
   transform: rotate(90deg);
   width: 900px;
-  margin-left: 80px;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  height: auto;
+  margin-bottom: 20px;
+}
+/* Tablet screens */
+@media (max-width: 1024px) {
+  .contact-image {
+    width: 700px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  .contact-image {
+    width: 500px;
+  }
+}
+
+/* Extra-small screens like phones */
+@media (max-width: 480px) {
+  .contact-image {
+    width: 300px;
+  }
 }
 .contact-form-heading {
   font-size: 3rem;
